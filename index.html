@@ -22,10 +22,8 @@
 
 
 <div id="upcoming-events-container">
-<h4 id="upcoming-events-header">Next Library Event</h4>
+<h4 id="upcoming-events-header">Upcoming Library Events</h4>
 <ul id="upcoming-events-list"></ul>
-
-
 
 <script>
 var apis4librarians_nextEvents = (function() {
@@ -177,7 +175,7 @@ var apis4librarians_nextEvents = (function() {
     return result;
   };
   $.getJSON(
-    "https://kesar.herokuapp.com/springshare/libcal/passthrough?what=/events?cal_id=8758",
+    "https://kesar.herokuapp.com/springshare/libcal/passthrough?what=/events?cal_id=8758&limit=100&days=365",
     function(result) {
       var howManyToDisplay = 100;
       if (howManyToDisplay > result.events.length) {
@@ -199,9 +197,9 @@ var apis4librarians_nextEvents = (function() {
 
           eventsUL.insertAdjacentHTML(
             "beforeend",
-            `<li id="event-${eventsFun.id}"><a href="${eventsFun.url.public}">${
-              eventsFun.title
-            }</a> <ul><li class="upcoming-events-time">${formattedStartTime}</li></ul> </li>`
+            `<li id="event-${eventsFun.id}"><a href="${eventsFun.url.public}">
+            ${eventsFun.title}</a>
+             <ul><li class="upcoming-events-time">${result.events[i].campus.name} - ${formattedStartTime}</li></ul> </li>`
           );
           console.log(result.events[i].title);
         }
