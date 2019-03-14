@@ -1,0 +1,21 @@
+               <!-- admin - calendars - settings --> 
+
+                <div class="s-lc-mc-evt" style="border-left: 3px solid {{color}}">
+<a href="{{url}}" data-toggle="popover" data-placement="top" data-container="body" data-html="true" data-trigger="hover" title="{{title}}"
+data-content="<dl class='dl-horizontal'>
+              <dt>Time</dt><dd>{{start}} {{end}}</dd>
+              {{#loc}}<dt>Location</dt><dd>{{loc}}</dd>{{/loc}}
+              {{#campus}}<dt>Campus</dt><dd>{{campus}}</dd>{{/campus}}
+              {{#audiences.0}}
+                <dt>Audience</dt>
+                <dd>{{#audiences}}<span class='label' style='background-color:{{color}}'>{{name}}</span> {{/audiences}}</dd>
+              {{/audiences.0}}
+              {{#categories}}<dt>Categories</dt><dd>{{#categories_arr}}<span class=label style='background-color:{{color}}'>{{name}}</span> {{/categories_arr}}</dd>{{/categories}}
+              {{#presenter}}<dt>Presenter</dt><dd>{{presenter}}</dd>{{/presenter}}
+              {{#seats}}<dt>Seats</dt><dd>{{seatsleft}} seats remaining / {{seats}} seats. </dd>{{/seats}}
+              {{#shortdesc}}<dt>Description</dt><dd>{{shortdesc}}</dd>{{/shortdesc}}
+            </dl>">{{title}}</a><br>
+<div class="s-lc-mc-evt-loc">{{location}}</div>
+<div class="s-lc-mc-evt-time">{{start}}</div>
+</div>
+            
