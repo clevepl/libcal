@@ -14,9 +14,6 @@ h1, h2, h3, h4, h5 {
 font-weight: 700;
 }
 
-/*Hide seats remaining banner in card view*/
-.s-lc-ribbon-top-right {
-    display: none;}
 
 #s-lc-appointments-availability-warning {
     display: none;
