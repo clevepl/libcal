@@ -2,6 +2,8 @@
 // this is the custom CSS code ONLY 
 
 
+<link rel="stylesheet" href="https://use.typekit.net/hmm8egp.css">
+
 <style> 
 
 body {
@@ -16,4 +18,7 @@ font-weight: 700;
 .s-lc-ribbon-top-right {
     display: none;}
 
+#s-lc-appointments-availability-warning {
+    display: none;
+}
 </style>
