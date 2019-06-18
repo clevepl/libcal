@@ -1,4 +1,8 @@
 <!-- Single Event page Template -->
+<!-- 
+editable at https://cpl.libcal.com/admin/look-and-feel/page/9646 -->
+<!-- 
+-->
 
 <div class="row">
     <div class="col-md-12">
@@ -12,7 +16,7 @@
 
             <div class="media-body">
                 <div class="btn-group pull-right" id="s-lc-event-tool-btns">
-                    <a class="btn btn-default" href="#" onclick="window.print(); return false;" data-container="body" data-toggle="tooltip" title="Print page" id="s-lc-event-b-p"><i class="fa fa-print fa-lg"></i><span class="sr-only">Print the page</span></a>
+                    <a class="btn btn-default" href="#" onclick="window.print(); return false;" data-container="body" data-toggle="tooltip" title="Print page" id="s-lc-event-b-p"><i class="fa fa-print fa-lg"></i><span class="sr-only">Print this page</span></a>
                     <a class="btn btn-default" href="{{ical}}" data-container="body" data-toggle="tooltip" title="Add to Calendar using iCal" id="s-lc-event-b-c"><i class="fa fa-calendar fa-lg"></i><span class="sr-only">Add to a Calendar using iCal</span></a>
                     <a class="btn btn-default" href="{{facebook_url}}" data-container="body" data-toggle="tooltip" title="Share on Facebook" id="s-lc-event-b-f" target="_blank"><i class="fa fa-facebook-square fa-lg"></i><span class="sr-only">Share page on Facebook</span></a>
                     <a class="btn btn-default" href="{{twitter_url}}" data-container="body" data-toggle="tooltip" title="Share on Twitter" id="s-lc-event-b-t" target="_blank"><i class="fa fa-twitter-square fa-lg"></i><span class="sr-only">Share page on Twitter</span></a>
@@ -22,7 +26,15 @@
                 <div id="s-lc-event-desc">
                 {{{description}}}
                 </div>
+          </div>
+      </div>
 
+{{#registration_form}}
+{{{registration_form}}}
+{{/registration_form}}
+
+     <div class="media">
+          <div class="media-body">
                 <dl class="dl-horizontal s-lc-event-dl">
                     {{#series_datetimes}}
                         <dt>Dates & Times:</dt>
@@ -71,7 +83,6 @@
                         <dt>Categories: </dt>
                          <dd>
                             {{#categories_arr}}
-                            <span class="s-lc-event-category-color" style="background-color:{{color}}"> </span>
                             <span class="s-lc-event-category-link">
                                 <a href="{{calendar_url}}&t=g&d=0000-00-00&cal%5B%5D={{calendar_id}}&ct%5B%5D={{cat_id}}">{{name}}</a>
                             </span>  
@@ -83,10 +94,6 @@
         </div>
     </div>
 </div>
-
-{{#registration_form}}
-{{{registration_form}}}
-{{/registration_form}}
 
 {{#reg_expired}}
 <div class="row margin-top-med">
@@ -117,3 +124,4 @@
 <script>
     jQuery("body").addClass("s-lc-public-evtp");
 </script>
+
