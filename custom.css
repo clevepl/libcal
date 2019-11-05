@@ -22,4 +22,14 @@ font-size: 1.3em;
 #s-lc-appointments-availability-warning {
     display: none;
 }
+
+
+/*hide Make Another Booking button 
+on the cancel person's booking page*/
+
+#s-lc-start-new-booking {
+display: none !important;
+}
+
+
 </style>
