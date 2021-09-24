@@ -1,13 +1,14 @@
 // available in the https://cpl.libcal.com/admin_look.php?action=0
 // this is the custom CSS code ONLY 
 
-
-<link rel="stylesheet" href="https://use.typekit.net/hmm8egp.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap" rel="stylesheet">
 
 <style> 
 
 body {
-font-family: 'proxima-nova', sans-serif !important;
+font-family: "Work Sans", sans-serif !important;
 font-size: 1.25em; 
 }
 h1, h2, h3, h4, h5 {
@@ -18,18 +19,16 @@ font-weight: 700;
 font-size: 1.3em;
 }
 
+.s-lc-eventcard-inner-container {
+font-family: "Work Sans";
+}
+
 
 #s-lc-appointments-availability-warning {
     display: none;
 }
 
-
-/*hide Make Another Booking button 
-on the cancel person's booking page*/
-
 #s-lc-start-new-booking {
 display: none !important;
 }
-
-
 </style>
