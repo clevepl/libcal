@@ -2,11 +2,23 @@ Your CPL {{#BOOKINGS.0}}{{location.name}}{{/BOOKINGS.0}} {{#MEDIATED_ROOM_TIMES}
 
 Hi {{{FIRST_NAME}}},
 
-Your room reservation(s) listed below have been successfully submitted for request. You will receive a response within 2 business days. 
+Your room reservation(s) listed below have been successfully submitted {{#MEDIATED_ROOM_TIMES}} for request.You will receive a response within 2 business days. 
+{{/MEDIATED_ROOM_TIMES}}{{^MEDIATED_ROOM_TIMES}} and approved by library staff:{{/MEDIATED_ROOM_TIMES}}
+
 
 {{#BOOKINGS}}
-{{item.name}} at {{location.name}} on {{times}}. 
+{{item.name}} at the <a href="https://cpl.org/locations/harvard-lee">{{location.name}} Campus</a> on {{times}}. 
 {{/BOOKINGS}}
 
+
+{{^MEDIATED_ROOM_TIMES}}
+Please visit a staff member when you arrive for assistance. 
+
+For further assistance or questions about your reservation please call us at <a href="tel:1-216-623-6906">216-623-6906</a> or email 
+<a href="mailto:Addison.Branch@cpl.org">Addison.Branch@cpl.org</a>
+
+Please review our Policy on Facility Use (<a href="https://cpl.org/policy-on-facility-use">https://cpl.org/policy-on-facility-use</a>) before your visit.
+
+{{/MEDIATED_ROOM_TIMES}}
 
 Thank you for using Cleveland Public Library, The People’s University
