@@ -1,6 +1,3 @@
-// available in the https://cpl.libcal.com/admin_look.php?action=0
-// this is the custom CSS code ONLY 
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap" rel="stylesheet">
@@ -31,4 +28,11 @@ font-family: "Work Sans";
 #s-lc-start-new-booking {
 display: none !important;
 }
+
+/* increasing the height of the purpose of space reservation text field on the public room reservation form ID 2288*/ 
+#q21658 {
+height: 8ch; 
+
+}
+
 </style>
