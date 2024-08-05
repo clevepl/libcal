@@ -1,0 +1,28 @@
+Hi {{{FIRST_NAME}}},
+
+This is a reminder about the following upcoming bookings:
+
+{{{BOOKING_DETAILS}}}
+
+{{#ROOM_DIRECTIONS}}
+Directions:
+{{{ROOM_DIRECTIONS}}}
+{{/ROOM_DIRECTIONS}}
+
+{{{CATEGORY}}}
+
+{{{ADDITIONAL_INFORMATION}}}
+
+Please note all space reservations end at 5:45 p.m.
+
+Please visit a staff member when you arrive for assistance. 
+
+For further assistance or questions about your reservation please call us at <a href="tel:1-216-623-6975">216-623-6975</a> or email 
+<a href="mailto:Langston.Hughes.Branch@cpl.org">Langston.Hughes.Branch@cpl.org</a>
+
+{{#CHECK_IN_URL}}When you arrive for your booking:
+1. Scan the QR code next to your space (if QR code is available), or <a href="{{{CHECK_IN_URL}}}">click this link</a> to check in
+2. Enter this code: <strong>{{CHECK_IN_CODE}}</strong>{{/CHECK_IN_URL}}
+{{^CHECK_IN_URL}}{{#CHECK_IN_CODE}}Your check in code is: <strong>{{CHECK_IN_CODE}}</strong>{{/CHECK_IN_CODE}}{{/CHECK_IN_URL}}
+
+To cancel this booking visit: <a href="{{{CANCEL_URL}}}">{{{CANCEL_URL}}}</a>
