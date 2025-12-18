@@ -7,18 +7,23 @@
 body {
 font-family: "Work Sans", sans-serif !important;
 }
+
 h1, h2, h3, h4, h5 {
 font-weight: 700;
 }
 
-.media-body {
+.media-body, #s-lc-public-pd, #s-lc-public-main {
 font-size: 1.3em;
+line-height: 1.4; 
 }
 
 .s-lc-eventcard-inner-container {
 font-family: "Work Sans";
 }
 
+* + p {
+  margin-block-start: 1.3rem;
+}
 
 #s-lc-appointments-availability-warning {
     display: none;
@@ -31,7 +36,6 @@ display: none !important;
 /* increasing the height of the purpose of space reservation text field on the public room reservation form ID 2288*/ 
 #q21658 {
 height: 8ch; 
-
 }
 
 </style>
