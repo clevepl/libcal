@@ -38,4 +38,9 @@ display: none !important;
 height: 8ch; 
 }
 
+.media-body a {
+	text-decoration-line: underline;
+	transition: color 0.1s ease-in-out;
+}
+
 </style>
