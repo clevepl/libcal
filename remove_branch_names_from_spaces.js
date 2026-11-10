@@ -11,6 +11,10 @@
 
 // if there's no " - " in the location's name, just return the text.
 let singleEventPageLocation = document.querySelector(".truncation_location");
+
+if (singleEventPageLocation !== null) {
+
 let betterText = singleEventPageLocation.textContent.split(" - ").slice(1).join(" - ") || singleEventPageLocation.textContent.trim();
 
 singleEventPageLocation.textContent = betterText;
+}
