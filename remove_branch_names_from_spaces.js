@@ -14,7 +14,22 @@ let singleEventPageLocation = document.querySelector(".truncation_location");
 
 if (singleEventPageLocation !== null) {
 
-let betterText = singleEventPageLocation.textContent.split(" - ").slice(1).join(" - ") || singleEventPageLocation.textContent.trim();
+    let betterText = singleEventPageLocation.textContent.split(" - ").slice(1).join(" - ") || singleEventPageLocation.textContent.trim();
 
-singleEventPageLocation.textContent = betterText;
+    singleEventPageLocation.textContent = betterText;
 }
+
+
+// within each s-lc-eventcard-heading-text-group, find the 2nd child (it'll have s-lc-eventcard-heading-text s-lc-hide-long-text 
+// and return the text that is before the first comma 
+// input <div class="s-lc-eventcard-heading-text s-lc-hide-long-text">Main Library (Downtown), Main 04 - 4th Floor - ForLit Gallery/Classroom</div>
+// output <div class="s-lc-eventcard-heading-text s-lc-hide-long-text">Main Library (Downtown)</div>
+let ourTextGroups = document.querySelectorAll(".s-lc-eventcard-heading-text-group");
+
+ourTextGroups.forEach((aTextGrp) => {
+    for (const child of aTextGrp.children) {
+        if (child === aTextGrp.children[1]) {
+            child.textContent = child.textContent.split(",")[0];
+        }
+    }
+});
